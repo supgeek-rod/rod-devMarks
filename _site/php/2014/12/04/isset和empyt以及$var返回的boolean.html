@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>isset和empyt以及$var所返回的boolean</title>
+    <meta charset="utf-8">
+    <meta title="keywords" content="">
+    <meta title="description" content="">
+    <link rel="stylesheet" href="/assets/style/bootstrap.min.css">
+    <link rel="stylesheet/less" href="/assets/style/less/bootstrap.less">
+    <script rel="javascript/text" src="/assets/script/jquery-1.8.3.min.js"></script>
+    <script rel="javascript/text" src="/assets/script/bootstrap.min.js"></script>
+    <script rel="javascript/text" src="/assets/script/less-1.7.1.min.js"></script>
+    <script rel="javascript/text" src="/assets/script/script.js"></script>
+</head>
+
+<body>
+
+
+
+<!-- MainBody -->
+<div id="dm-body" class="container">
+    <div class="row">
+        <!-- Nav -->
+        <div id="nav" class="col-sm-2">
+            <!-- Logo -->
+<div id="logo">
+    <span class="glyphicon glyphicon-bookmark logo hidden"></span>
+    <!-- DevMarks -->
+    <span class="one">Rod</span>
+    <span class="two">'d&nbsp;</span>
+    <span class="three">dev</span>
+    <span class="four">M</span>
+    <span class="five">ark</span>
+    <span class="six">s</span>
+</div>           
+<ul class="nav nav-pills nav-stacked">
+    <li class=""><a href="/">Home</a></li>
+    
+        <li class=""><a href="/front-end/">front-end</a></li>
+    
+        <li class=""><a href="/unix-like/">unix-like</a></li>
+    
+        <li class=""><a href="/php/">php</a></li>
+    
+</ul> 
+
+        </div>
+
+        <!-- Content -->
+        <div class="col-sm-10">
+            <!-- Breadcrumb -->
+<ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/php/">php</a></li>
+    <li class="active">isset和empyt以及$var所返回的boolean</li>
+</ol>
+
+<!-- Article -->
+<article>
+    <h1>isset和empyt以及$var所返回的boolean</h1>
+    <div>
+        
+            <label class="label label-default">php</label>
+        
+    </div>
+    <h3>isset($var)</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return false
+$var未设置，或者是NULL
+
+return true
+$var已设置，并且不是NULL
+</code></pre></div>
+<h3>empty($var)</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return false
+// 如果 var 是非空或非零的值，则 empty() 返回 FALSE。
+// ‘0.0’
+
+return true
+// 换句话说，&quot;&quot;、0、&quot;0&quot;、NULL、FALSE、array()、var $var; 以及没有任何属性的对象都将被认为是空的，如果 var 为空，则返回 TRUE。
+</code></pre></div>
+<h3>if ($var)</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">return false
+// 布尔值 FALSE 本身
+// 整型值 0（零）
+// 浮点型值 0.0（零）
+// 空字符串，以及字符串 &quot;0&quot;
+// 不包括任何元素的数组
+// 不包括任何成员变量的对象（仅 PHP 4.0 适用）
+// 特殊类型 NULL（包括尚未赋值的变量）
+// 从空标记生成的 SimpleXML 对象
+
+return true
+// 所有其它值都被认为是 TRUE（包括任何资源)
+</code></pre></div>
+</article>
+
+<div id="disqus_thread" class=""></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'dev-marks'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+    <footer class="container text-center">
+        <hr>
+        2014&copy; Rod
+    </footer>
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40338826-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
+

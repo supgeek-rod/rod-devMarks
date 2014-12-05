@@ -1,0 +1,17 @@
+<!-- Logo -->
+<div id="logo">
+    <span class="glyphicon glyphicon-bookmark logo hidden"></span>
+    <!-- DevMarks -->
+    <span class="one">Rod</span>
+    <span class="two">'d&nbsp;</span>
+    <span class="three">dev</span>
+    <span class="four">M</span>
+    <span class="five">ark</span>
+    <span class="six">s</span>
+</div>           
+<ul class="nav nav-pills nav-stacked">
+    <li class="{% if page.position == 'home' %}active{% endif %}"><a href="/">Home</a></li>
+    {% for category in site.categories %}
+        <li class="{% if page.categories == 'git' %}active{% endif %}"><a href="/{{ category.first }}/">{{ category | first }}</a></li>
+    {% endfor %}
+</ul> 

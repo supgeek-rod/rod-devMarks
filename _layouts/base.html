@@ -1,0 +1,21 @@
+{% include header.html %}
+
+
+<!-- MainBody -->
+<div id="dm-body" class="container">
+    <div class="row">
+        <!-- Nav -->
+        <div id="nav" class="col-sm-2">
+            {% include nav.html %}
+        </div>
+
+        <!-- Content -->
+        <div class="col-sm-10">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+{% include footer.html %}

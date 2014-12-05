@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<!-- Breadcrumb -->
+<ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="">{{ page.categories }}</a></li>
+    <li class="active">{{ page.title }}</li>
+</ol>
+
+<!-- PostList -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="">Title</th>
+            <th style="width:200px">Tags</th>
+            <th style="width:140px">Date</th>
+        </tr>
+    </thead>
+        {% for post in site.categories.git %}
+        {% include post-item.html %}
+        {% endfor %}
+
+    <tbody>
+    </tbody>
+</table>
+
+<!-- Pagination -->
+<ul class="pagination hide">
+    <li><a href="">&laquo;</a></li>
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">&raquo;</a></li>
+</ul>
+
