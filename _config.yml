@@ -11,5 +11,5 @@ email: supgeek.rod@gmail.com
 # Build settings
 # ---------------------------
 markdown: redcarpet
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown_ext: "html,md"
 exclude: [ template-category-page.html ]

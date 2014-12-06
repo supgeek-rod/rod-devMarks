@@ -12,6 +12,6 @@
 <ul class="nav nav-pills nav-stacked">
     <li class="{% if page.position == 'home' %}active{% endif %}"><a href="/">Home</a></li>
     {% for category in site.categories %}
-        <li class="{% if page.categories == 'git' %}active{% endif %}"><a href="/{{ category.first }}/">{{ category | first }}</a></li>
+        <li class="{% if category.first == page.categories[0] %}active{% endif %}"><a href="/{{ category.first }}/">{{ category | first }}</a></li>
     {% endfor %}
 </ul> 
